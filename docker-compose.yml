@@ -3,3 +3,8 @@ version: '3'
 services: 
   opacle:
     build: ./oracle
+    container_name: oracle-18-xe
+    restart: on-failure
+    ports:
+      - "1521:1521"
+      - "5500:5500"
